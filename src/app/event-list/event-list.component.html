@@ -1,0 +1,15 @@
+<h1>
+  Event List 2018
+</h1>
+
+
+<mat-card *ngFor="let event of events">
+  <mat-card-title><h2>{{event.organizer}}</h2></mat-card-title>
+  <mat-card-subtitle>
+    <h3>
+      Date: {{event.date}}
+    </h3>
+  </mat-card-subtitle>
+  <h3>Location: {{event.location}}</h3>
+  <img src="{{urlBE + event.field_image}}" alt="The Wall">
+</mat-card>
