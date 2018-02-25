@@ -12,6 +12,7 @@ import {configs} from '../../util';
 export class EventListComponent implements OnInit, AfterContentInit {
   events: Event[];
   urlBE: string;
+  eventDetail: Event;
 
   constructor(
     private eventService: EventService
@@ -29,6 +30,15 @@ export class EventListComponent implements OnInit, AfterContentInit {
     this.eventService.getEvents()
       .subscribe(
         events => this.events = events);
+  }
+
+  getEventDetail(event): void {
+    console.log(event);
+    this.eventDetail = event;
+  }
+
+  backToList(): void {
+    this.eventDetail = null;
   }
 
 }

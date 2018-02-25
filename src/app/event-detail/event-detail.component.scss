@@ -1,0 +1,18 @@
+app-event-detail{
+
+  div{
+
+    &.component{
+
+      &-container{
+        display: flex;
+        width: 100%;
+        height: auto;
+        margin:{
+          top: 20px;
+          bottom: 20px;
+        }
+      }
+    }
+  }
+}

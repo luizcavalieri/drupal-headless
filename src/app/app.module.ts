@@ -7,17 +7,23 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { AppComponent } from './app.component';
 
 import { environment } from '../environments/environment';
+import {HttpClientModule} from '@angular/common/http';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {
+  MatButtonModule,
+  MatCardModule
+} from '@angular/material';
+
+import { EventDetailComponent } from './event-detail/event-detail.component';
 import { EventListComponent } from './event-list/event-list.component';
 import { EventService } from './services/event.service';
 import { MessageService } from './services/message.service';
-import {HttpClientModule} from '@angular/common/http';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatCardModule} from '@angular/material';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EventListComponent
+    EventListComponent,
+    EventDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +36,8 @@ import {MatCardModule} from '@angular/material';
         {
           enabled: environment.production
         }),
-    MatCardModule
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [
     EventService,

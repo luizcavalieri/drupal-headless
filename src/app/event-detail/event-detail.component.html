@@ -1,0 +1,19 @@
+<header *ngIf="eventDetail">
+  <h1>
+    {{eventDetail.organizer}} concert - {{eventDetail.date}}
+  </h1>
+</header>
+<main class="component-container" *ngIf="eventDetail">
+  <mat-card>
+    <mat-card-title>
+      <h2>{{eventDetail.organizer}}</h2>
+    </mat-card-title>
+    <mat-card-subtitle>
+      <h3>
+        Date: {{eventDetail.date}}
+      </h3>
+    </mat-card-subtitle>
+    <h3>Location: {{eventDetail.location}}</h3>
+    <img src="{{urlBE + eventDetail.field_image}}" alt="The Wall">
+  </mat-card>
+</main>
