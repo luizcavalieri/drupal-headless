@@ -4,12 +4,14 @@ import {
   MatButtonModule,
   MatCardModule
 } from '@angular/material';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   imports: [
     CommonModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    BrowserAnimationsModule,
   ],
   declarations: []
 })
