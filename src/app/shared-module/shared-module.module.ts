@@ -16,4 +16,3 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
   declarations: []
 })
 export class SharedModuleModule { }
-
