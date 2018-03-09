@@ -17,6 +17,11 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatButtonModule,
     BrowserAnimationsModule,
   ],
+  exports: [
+    MatCardModule,
+    MatButtonModule,
+    BrowserAnimationsModule
+  ],
   declarations: []
 })
 export class SharedModuleModule { }

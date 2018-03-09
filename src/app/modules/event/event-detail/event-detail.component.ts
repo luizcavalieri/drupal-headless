@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Event} from '../models/event';
-import {configs} from '../../util';
+import {Event} from '../../../models/event';
+import {configs} from '../../../../util';
 
 @Component({
   selector: 'app-event-detail',

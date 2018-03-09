@@ -1,8 +1,8 @@
 import {AfterContentInit, AfterViewInit, Component, OnInit} from '@angular/core';
-import {EventService} from '../services/event.service';
-import {Event} from '../models/event'
+import {EventService} from '../../../services/event.service';
+import {Event} from '../../../models/event'
 import {HttpClientModule} from '@angular/common/http';
-import {configs} from '../../util';
+import {configs} from '../../../../util';
 
 @Component({
   selector: 'app-event-list',
