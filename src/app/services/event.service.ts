@@ -31,7 +31,7 @@ export class EventService {
   }
 
 
-  /** Log a HeroService message with the MessageService */
+  /** Log a EventService message with the MessageService */
   private log(message: string) {
     this.messageService.add('EventServices: ' + message);
   }
