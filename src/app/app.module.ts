@@ -18,6 +18,7 @@ import { EventService } from './services/event.service';
 import { MessageService } from './services/message.service';
 import {SharedModuleModule} from './shared-module/shared-module.module';
 import { AppEventModule } from './modules/event/event.module';
+import {LazyModule} from './directives/lazy/lazy.module';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { AppEventModule } from './modules/event/event.module';
         }),
     SharedModuleModule,
     AppEventModule,
-    AppEventModule
+    AppEventModule,
+    LazyModule,
   ],
   providers: [
     EventService,

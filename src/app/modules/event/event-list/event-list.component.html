@@ -16,7 +16,8 @@
         </h3>
       </mat-card-subtitle>
       <h3>Location: {{event.location}}</h3>
-      <img src="{{urlBE + event.image}}" alt="The Wall">
+      <!--<img src="{{urlBE + event.image}}" alt="The Wall">-->
+      <img [appLazySrc]="urlBE + event.image" lazySrcVisible="visible" class="" alt="{{ event.organizer }}"/>
     </mat-card>
   </a>
 </main>
