@@ -17,7 +17,7 @@ jobs:
        - run: docker build -t luizcavalieri/app:develop .
 
        # deploy the image
-       - run: docker push luizcavalieri/app:develop
+       - run: docker push luizcavalieri/drupal-headless:develop
 
 
 
