@@ -11,7 +11,8 @@ import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
   MatButtonModule,
-  MatCardModule
+  MatCardModule,
+  MatIconModule
 } from '@angular/material';
 
 import { EventService } from './services/event.service';
@@ -31,6 +32,7 @@ import {LazyModule} from './directives/lazy-load/lazy.module';
     BrowserAnimationsModule,
     MatCardModule,
     MatButtonModule,
+    MatIconModule,
     ServiceWorkerModule
       .register(
         '/ngsw-worker.js',

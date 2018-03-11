@@ -1,17 +1,23 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, HostBinding, Input, OnInit} from '@angular/core';
 import {Event} from '../../../models/event';
-import {configs} from '../../../../util';
+import {configs} from '../../../const/util';
 import {EventService} from '../../../services/event.service';
 import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 import 'rxjs/add/operator/switchMap';
 import {Observable} from 'rxjs/Observable';
+import { routerTransition } from '../../../const/animations';
 
 @Component({
   selector: 'app-event-detail',
   templateUrl: './event-detail.component.html',
-  styleUrls: ['./event-detail.component.scss']
+  styleUrls: ['./event-detail.component.scss'],
+  animations: [routerTransition()]
 })
 export class EventDetailComponent implements OnInit {
+  @HostBinding('@routerTransition') routeAnimation = true;
+  @HostBinding('style.display')   display = 'block';
+  @HostBinding('style.position')  position = 'absolute';
+
   eventDetail$: Observable<Event | Event[]>;
   urlBE: string;
 

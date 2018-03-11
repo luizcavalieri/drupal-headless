@@ -1,5 +1,9 @@
 <div *ngIf="eventDetail$ | async as eventDetail">
-  <button (click)="backToEventList()" mat-button> < </button>
+  <a (click)="backToEventList()">
+    <mat-icon>
+      keyboard_arrow_left
+    </mat-icon>
+  </a>
 
   <header>
     <h1>

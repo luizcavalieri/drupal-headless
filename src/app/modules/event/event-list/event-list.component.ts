@@ -1,15 +1,21 @@
-import {AfterContentInit, AfterViewInit, Component, OnInit} from '@angular/core';
+import {AfterContentInit, AfterViewInit, Component, HostBinding, OnInit} from "@angular/core";
 import {EventService} from '../../../services/event.service';
 import {Event} from '../../../models/event'
 import {HttpClientModule} from '@angular/common/http';
-import {configs} from '../../../../util';
+import {configs} from '../../../const/util';
+import {routerTransition} from '../../../const/animations';
 
 @Component({
   selector: 'app-event-list',
   templateUrl: './event-list.component.html',
-  styleUrls: ['./event-list.component.scss']
+  styleUrls: ['./event-list.component.scss'],
+  animations: [routerTransition()]
 })
 export class EventListComponent implements OnInit, AfterContentInit {
+  @HostBinding('@routerTransition') routeAnimation = true;
+  @HostBinding('style.display')   display = 'block';
+  @HostBinding('style.position')  position = 'absolute';
+
   events: Event[];
   urlBE: string;
   eventDetail: Event;
@@ -35,10 +41,6 @@ export class EventListComponent implements OnInit, AfterContentInit {
   getEventDetail(event): void {
     console.log(event);
     this.eventDetail = event;
-  }
-
-  backToList(): void {
-    this.eventDetail = null;
   }
 
 }

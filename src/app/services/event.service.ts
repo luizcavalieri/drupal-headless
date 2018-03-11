@@ -3,7 +3,7 @@ import { Event } from '../models/event';
 import {Observable} from 'rxjs/Observable';
 import {of} from 'rxjs/observable/of';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import {configs} from '../../util';
+import {configs} from '../const/util';
 import { catchError, map, tap } from 'rxjs/operators';
 import {MessageService} from './message.service';
 
@@ -39,7 +39,6 @@ export class EventService {
    * */
   getEvent(id: string): Observable<Event | Event[]> {
     this.eventUrl = configs.API_BASE_URL + 'events/' + id;
-
     return this.http.get<Event[]>(this.eventUrl)
       .map(events => events.find(event => event.id === id))
       .pipe(
