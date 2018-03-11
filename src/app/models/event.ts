@@ -1,7 +1,8 @@
 
 export class Event {
+ id: string;
  location: string;
  organizer: string;
  date: string;
- field_image: string;
+ image: string;
 }

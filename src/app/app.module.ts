@@ -14,30 +14,31 @@ import {
   MatCardModule
 } from '@angular/material';
 
-import { EventDetailComponent } from './event-detail/event-detail.component';
-import { EventListComponent } from './event-list/event-list.component';
 import { EventService } from './services/event.service';
 import { MessageService } from './services/message.service';
+import {SharedModuleModule} from './shared-module/shared-module.module';
+import { AppEventModule } from './modules/event/event.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    EventListComponent,
-    EventDetailComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    MatCardModule,
+    MatButtonModule,
     ServiceWorkerModule
       .register(
         '/ngsw-worker.js',
         {
           enabled: environment.production
         }),
-    MatCardModule,
-    MatButtonModule
+    SharedModuleModule,
+    AppEventModule,
+    AppEventModule
   ],
   providers: [
     EventService,

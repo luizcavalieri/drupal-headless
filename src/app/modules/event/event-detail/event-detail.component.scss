@@ -1,6 +1,6 @@
 app-event-detail{
 
-  div{
+  main{
 
     &.component{
 
@@ -11,6 +11,14 @@ app-event-detail{
         margin:{
           top: 20px;
           bottom: 20px;
+        }
+
+        a{
+
+
+          h2, h3{
+
+          }
         }
       }
     }

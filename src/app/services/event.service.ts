@@ -7,6 +7,8 @@ import {configs} from '../../util';
 import { catchError, map, tap } from 'rxjs/operators';
 import {MessageService} from './message.service';
 
+import 'rxjs/add/operator/map';
+
 @Injectable()
 export class EventService {
   eventUrl: string;
@@ -30,8 +32,33 @@ export class EventService {
       );
   }
 
+  /**
+   *
+   * @param id: selected event id.
+   *
+   * */
+  getEvent(id: string): Observable<Event | Event[]> {
+    this.eventUrl = configs.API_BASE_URL + 'events/' + id;
 
-  /** Log a HeroService message with the MessageService */
+    return this.http.get<Event[]>(this.eventUrl)
+      .map(events => events.find(event => event.id === id))
+      .pipe(
+        tap(_ =>
+          this.log(
+            `fetched event id=${id}`
+          )
+        ),
+        catchError(
+          this.handleError<Event[]>(
+            `getEvent id=${id}`
+          )
+        )
+      );
+  }
+
+
+
+  /** Log a EventService message with the MessageService */
   private log(message: string) {
     this.messageService.add('EventServices: ' + message);
   }

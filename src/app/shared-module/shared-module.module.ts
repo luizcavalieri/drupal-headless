@@ -1,10 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+// Extra Modules.
 import {
   MatButtonModule,
   MatCardModule
 } from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+// Custom created modules.
+
 
 @NgModule({
   imports: [
@@ -12,6 +16,11 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MatCardModule,
     MatButtonModule,
     BrowserAnimationsModule,
+  ],
+  exports: [
+    MatCardModule,
+    MatButtonModule,
+    BrowserAnimationsModule
   ],
   declarations: []
 })

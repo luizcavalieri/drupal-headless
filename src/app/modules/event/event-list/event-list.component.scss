@@ -1,0 +1,33 @@
+app-event-list {
+
+  main {
+
+    &.component {
+
+      &-container {
+
+        a {
+
+          mat-card {
+            max-width: 860px;
+            margin: {
+              bottom: 20px;
+            }
+
+            img {
+              max-width: 400px;
+              width: 100%;
+              height: auto;
+            }
+
+            h2, h3 {
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
