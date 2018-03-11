@@ -1,5 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
+
+@import 'assets/styles/custom-theme';
+
 @import 'app/modules/event/event-detail/event-detail.component';
 @import 'app/modules/event/event-list/event-list.component';
 @import 'app/modules/event/event.component';
