@@ -17,7 +17,7 @@ import {
 import { EventService } from './services/event.service';
 import { MessageService } from './services/message.service';
 import {SharedModuleModule} from './shared-module/shared-module.module';
-import { AppEventModule, AppEventModule } from './modules/event/event.module';
+import { AppEventModule } from './modules/event/event.module';
 
 @NgModule({
   declarations: [
