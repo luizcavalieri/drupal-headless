@@ -7,7 +7,7 @@ import {
   MatCardModule
 } from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {LazyModule} from '../directives/lazy/lazy.module';
+import {LazyModule} from '../directives/lazy-load/lazy.module';
 // Custom created modules.
 
 
