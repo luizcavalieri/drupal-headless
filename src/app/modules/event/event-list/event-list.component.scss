@@ -1,15 +1,17 @@
 app-event-list {
 
-  main {
+  section {
 
     &.component {
 
       &-container {
+        //display: flex;
+        //flex-direction: row;
 
         a {
 
           mat-card {
-            max-width: 860px;
+            max-width: 100%;
             margin: {
               bottom: 20px;
             }

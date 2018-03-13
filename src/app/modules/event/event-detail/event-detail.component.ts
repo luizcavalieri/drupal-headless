@@ -16,7 +16,7 @@ import { slideToLeft, fadeInContent } from '../../../const/animations';
 export class EventDetailComponent implements OnInit {
   @HostBinding('@routeState') routeAnimation = true;
   @HostBinding('style.display')   display = 'block';
-  @HostBinding('style.position')  position = 'absolute';
+  @HostBinding('style.position')  position = 'relative';
 
   eventDetail$: Observable<Event | Event[]>;
   urlBE: string;

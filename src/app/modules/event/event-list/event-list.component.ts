@@ -13,7 +13,7 @@ import {slideToLeft, fadeInContent} from '../../../const/animations';
 export class EventListComponent implements OnInit, AfterContentInit {
   @HostBinding('@routerTransition') routeAnimation = true;
   @HostBinding('style.display')   display = 'block';
-  @HostBinding('style.position')  position = 'absolute';
+  @HostBinding('style.position')  position = 'relative';
 
   events: Event[];
   urlBE: string;

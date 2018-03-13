@@ -1,5 +1,5 @@
 
-<main class="component-container" *ngIf="!eventDetail">
+<section class="component-container" *ngIf="!eventDetail">
   <a routerLink="/event/{{event.id}}" *ngFor="let event of events" >
     <mat-card  (click)="getEventDetail(event)">
       <mat-card-title>
@@ -15,6 +15,6 @@
       <img [appLazySrc]="urlBE + event.image" lazySrcVisible="visible" class="" alt="{{ event.organizer }}"/>
     </mat-card>
   </a>
-</main>
+</section>
 
 
