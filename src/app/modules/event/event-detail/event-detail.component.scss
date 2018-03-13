@@ -1,5 +1,20 @@
 app-event-detail{
 
+  header{
+    h1{
+      flex-direction: row;
+      display: flex;
+      justify-items: flex-start;
+
+      .mat-icon{
+        font-size: 1.3em;
+        margin: {
+          right: 10px;
+        };
+      }
+    }
+  }
+
   main{
 
     &.component{
@@ -13,13 +28,24 @@ app-event-detail{
           bottom: 20px;
         }
 
+
+        mat-card{
+
+          img{
+            width: 100%;
+            min-width: 640px;
+            height: auto;
+          }
+        }
+
         a{
 
 
-          h2, h3{
+            h2, h3{
 
+            }
           }
-        }
+
       }
     }
   }

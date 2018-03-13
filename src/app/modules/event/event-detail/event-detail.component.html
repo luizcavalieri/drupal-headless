@@ -1,12 +1,13 @@
 <div *ngIf="eventDetail$ | async as eventDetail">
-  <a (click)="backToEventList()">
-    <mat-icon>
-      keyboard_arrow_left
-    </mat-icon>
-  </a>
+
 
   <header>
     <h1>
+      <a (click)="backToEventList()">
+        <mat-icon>
+          keyboard_arrow_left
+        </mat-icon>
+      </a>
       {{eventDetail.organizer}} concert - {{eventDetail.date}}
     </h1>
   </header>
