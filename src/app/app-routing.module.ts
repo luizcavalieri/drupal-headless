@@ -6,7 +6,8 @@ import {EventService} from './services/event.service';
 const indexRoute: Route = {
   path: '',
   redirectTo: '/event-list',
-  pathMatch: 'full'
+  pathMatch: 'full',
+  data: { state: 'event-list' }
 };
 
 const routes: Routes = [

@@ -5,16 +5,16 @@ import {EventService} from '../../../services/event.service';
 import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 import 'rxjs/add/operator/switchMap';
 import {Observable} from 'rxjs/Observable';
-import { routerTransition } from '../../../const/animations';
+import { slideToLeft, fadeInContent } from '../../../const/animations';
 
 @Component({
   selector: 'app-event-detail',
   templateUrl: './event-detail.component.html',
   styleUrls: ['./event-detail.component.scss'],
-  animations: [routerTransition()]
+  animations: [fadeInContent]
 })
 export class EventDetailComponent implements OnInit {
-  @HostBinding('@routerTransition') routeAnimation = true;
+  @HostBinding('@routeState') routeAnimation = true;
   @HostBinding('style.display')   display = 'block';
   @HostBinding('style.position')  position = 'absolute';
 

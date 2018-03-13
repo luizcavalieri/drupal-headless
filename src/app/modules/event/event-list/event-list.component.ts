@@ -1,15 +1,14 @@
-import {AfterContentInit, AfterViewInit, Component, HostBinding, OnInit} from "@angular/core";
+import {AfterContentInit, AfterViewInit, Component, HostBinding, OnInit} from '@angular/core';
 import {EventService} from '../../../services/event.service';
 import {Event} from '../../../models/event'
-import {HttpClientModule} from '@angular/common/http';
 import {configs} from '../../../const/util';
-import {routerTransition} from '../../../const/animations';
+import {slideToLeft, fadeInContent} from '../../../const/animations';
 
 @Component({
   selector: 'app-event-list',
   templateUrl: './event-list.component.html',
   styleUrls: ['./event-list.component.scss'],
-  animations: [routerTransition()]
+  animations: [slideToLeft]
 })
 export class EventListComponent implements OnInit, AfterContentInit {
   @HostBinding('@routerTransition') routeAnimation = true;
