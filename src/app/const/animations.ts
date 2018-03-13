@@ -98,4 +98,4 @@ export const routerTransition = trigger('routerTransition', [
         animate('0.5s ease-in-out', style({ transform: 'translateX(-100%)' }))], { optional: true }),
     ])
   ])
-])
+]);
